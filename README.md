@@ -3,7 +3,7 @@
 
 
 ## Description
-This is a mini IMDB clone app built using only vanilla Javascript. No libraries or frameworks were used for the Javascript portion of the app, but a CSS framework like Bootstrap was allowed.
+This is a mini IMDB clone app built using HTML, CSS,vanilla Javascript. 
 
 ## Features
 - Search for movies by title or keyword
