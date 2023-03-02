@@ -1,0 +1,117 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="movies.css" />
+
+    <title>imbd</title>
+  </head>
+  <body>
+    <!-- Navigation Menu and Search Bar Section -->
+    <header>
+      <div class="nav-container">
+        <div class="left center">
+
+          <!-- Logo container -->
+          <div class="logo">
+            <div class="container">
+              <p>IM<span>Db</span></p>
+            </div>
+          </div>
+
+          <!-- Home Button -->
+          <div class="btn center">
+            <button
+              class="menu-btn"
+              onclick="window.location.href='index.html' "
+            >
+              <i class="fa-solid fa-house">&nbsp &nbsp</i> Home
+            </button>
+          </div>
+
+          <!-- Search Bar Container -->
+          <div class="search-container-btn center">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search Movie Title "
+              id="movie-search-box"
+              onkeyup="findMovies()"
+              onclick="findMovies()"
+            />
+
+            <!-- SearchList - Dynamically fetch data from API -->
+            <div class="search-list" id="search-list">
+              <!-- list here -->
+            </div>
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+        <div class="right center">
+
+          <!-- Favorite Button -->
+          <div class="btn center">
+            <!-- <input type="button" id="menu-btn" value="Favorite"> -->
+            <button
+              class="menu-btn"
+              onclick="window.location.href='movies.html' "
+            >
+              <i class="fas fa-heart">&nbsp &nbsp</i> Favorite
+            </button>
+          </div>
+
+          <!-- profile -->
+          <div class="btn center profile">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Body section -->
+    <main>
+      <!-- image slider -->
+      <div class="slideshow-container" id="movie-box">
+        <div class="mySlides fade center">
+          <img src="https://picsum.photos/id/203/500/800" style="width: 100%" />
+          <div class="text">7.5</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div class="right-container" id="popular-Movie">
+        <h1>Most Popular Movies</h1>
+        
+
+        
+      </div>
+
+
+    
+      <div id="overlay" onclick="off()">
+        <div class="container">
+          <div class="result-container">
+            <div class="result-grid" id="result-grid">
+             
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/124c650f91.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script src="movies.js"></script>
+  </body>
+</html>

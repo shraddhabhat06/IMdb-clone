@@ -1,0 +1,304 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+}
+
+i {
+  font-size: 16px;
+}
+
+/* utility */
+
+/* 1. center */
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. button */
+
+.btn {
+  height: 40px;
+  width: 100px;
+  margin-right: 20px;
+  background-color: rgb(35, 35, 33);
+  border-radius: 5px;
+  color: white;
+  transition: 0.6s ease;
+}
+
+.btn:hover {
+  border: 1px solid rgb(252, 194, 5);
+  color: rgb(252, 194, 5);
+}
+
+.profile {
+  border-radius: 80%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ecfd01;
+}
+
+.profile i {
+  font-size: 16px;
+}
+
+/* body - header */
+
+.nav-container {
+  background-color: #121212;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+
+  /* margin-top: 0.5rem; */
+}
+
+#imbd-logo {
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+header .btn {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.btn .menu-btn {
+  height: 100%;
+  width: 100%;
+  font-weight: 700;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  /* margin: 2rem 2rem; */
+}
+
+.search-container-btn,
+.form-control {
+  /* border: 1px solid #fff; */
+  height: 40px;
+  width: 350px;
+  text-align: start;
+  border-radius: 5px;
+  border: 0;
+  position: relative;
+  outline: 0;
+}
+
+.search-btn {
+  height: 40px;
+  border: 0;
+  border-radius: 5px;
+  margin-left: -5px;
+  padding: 0px 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+#search-box {
+  padding-left: 10px;
+  outline: 0;
+}
+
+/* main */
+
+main {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+/* slide image section  */
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+.slideshow-container {
+  max-width: 30%;
+  /* height: 500px; */
+  position: absolute;
+  margin: 2% 5% 0;
+  left: 0;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  border: 1px solid white;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Caption text */
+.text {
+  color: #ffffff;
+  background: rgba(8, 5, 5, 0.562);
+  font-size: 30px;
+  padding-top: 5px;
+  position: absolute;
+  font-weight: 800;
+  right: -20;
+  /* top: -6; */
+  bottom: 0;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  padding-right: -6px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  /* border-radius: 20px; */
+}
+
+/* The dots/bullets/indicators */
+
+.active,
+.dot:hover {
+  background-color: #111111;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+/* right side of the window */
+
+.right-container {
+  margin: 2% 2% 0 10%;
+  width: 60%;
+  height: 90vh;
+  overflow: scroll;
+  position: absolute;
+  right: 0;
+}
+
+.card {
+  /* border: 1px solid white; */
+
+  display: flex;
+  margin: 30px 10px 10px 5%;
+  position: relative;
+}
+
+.card img {
+  height: 250px;
+  width: 150px;
+}
+.card .text-container {
+  margin: 0px 10px;
+  padding: 10px;
+}
+
+/* About Movies section--- page 2 */
+
+.border {
+  border: 1px solid white;
+}
+
+.body-container {
+  /* border: 1px solid white; */
+  height: 90vh;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-body,
+.right-body {
+  height: 80%;
+  width: 45%;
+}
+
+.left-body img {
+  height: 100%;
+  width: 100%;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.902);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
